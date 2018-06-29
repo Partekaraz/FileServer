@@ -10,10 +10,9 @@ namespace FileServer.Infrastructure.Repository.Manager
 {
 	public class FileManager
 	{
-		public static Boolean EscribirJson(String xTexto)
+		public static Boolean EscribirJson(String Path)
 		{
 
-			throw new NotImplementedException("The method is not implemented yet");
 			//StreamWriter streamWriter = null;
 			//try
 			//{
@@ -33,6 +32,9 @@ namespace FileServer.Infrastructure.Repository.Manager
 			//{
 			//	if (streamWriter != null) streamWriter.Close();
 			//}
+
+			throw new NotImplementedException("The method is not implemented yet");
+			
 		}
 	}
 }

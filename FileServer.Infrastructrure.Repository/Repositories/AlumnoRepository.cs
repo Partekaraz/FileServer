@@ -13,8 +13,7 @@ namespace FileServer.Infrastructure.Repository.Repositories
 			{
 				string AlumnoJson = JsonConvert.SerializeObject(alumno);
 
-				//streamWriter = new StreamWriter(@"c:\Albert\json.txt", true);
-				//streamWriter.WriteLine(AlumnoJson);
+				Manager.FileManager.EscribirJson(@"c:\Albert\json.txt");
 
 				alumno = JsonConvert.DeserializeObject<Alumno>(AlumnoJson);
 			}
