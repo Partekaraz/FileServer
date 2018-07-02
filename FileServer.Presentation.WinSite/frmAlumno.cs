@@ -20,9 +20,8 @@ namespace FileServer.Presentation.WinSite
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			var vRuta = ConfigurationManager.AppSettings.Get("RutaWin");
 
-			var alumno = new Alumno(1, "Alberto", "Azor Polo", "12345678A");
+			var alumno = new Alumno(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, textBox4.Text);
 			iAlumnoRepository.Add(alumno);
 		}
 	}
