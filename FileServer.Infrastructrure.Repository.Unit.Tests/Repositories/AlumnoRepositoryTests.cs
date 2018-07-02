@@ -13,6 +13,7 @@ namespace FileServer.Infrastructure.Repository.Repositories.Tests
 
 		Alumno alumno = new Common.Model.Alumno
 		{
+
 			Id = 1,
 			Nombre = "Alberto",
 			Apellidos = "Azor Polo",
