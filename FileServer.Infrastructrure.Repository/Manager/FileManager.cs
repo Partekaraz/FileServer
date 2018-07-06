@@ -10,6 +10,8 @@ namespace FileServer.Infrastructure.Repository.Manager
 {
 	public class FileManager
 	{
+		// variable estatica del path
+
 		public static Boolean FileExist(String Path)
 		{
 			return File.Exists(Path);
@@ -23,13 +25,14 @@ namespace FileServer.Infrastructure.Repository.Manager
 			{
 				if (!File.Exists(Path)) streamWriter = new StreamWriter(Path);
 			}
-			catch
+			catch (Exception ex)
 			{
 				vRetorno = false;
+				throw ex;
 			}
 			finally
 			{
-				if (streamWriter != null) streamWriter.Close();
+				if (streamWriter != null) streamWriter.Dispose();
 			}
 
 			return vRetorno;

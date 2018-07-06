@@ -11,6 +11,7 @@ namespace FileServer.Presentation.WinSite
 	{
 
 		IAlumnoRepository iAlumnoRepository;
+		private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
 		public frmAlumno()
 		{
@@ -21,8 +22,15 @@ namespace FileServer.Presentation.WinSite
 		private void button1_Click(object sender, EventArgs e)
 		{
 
+			log.Info("Envío alumno.");
 			var alumno = new Alumno(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, textBox4.Text);
 			iAlumnoRepository.Add(alumno);
+			log.Info("Alumno insertado.");
+		}
+
+		private void frmAlumno_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
